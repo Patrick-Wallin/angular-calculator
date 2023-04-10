@@ -1,0 +1,28 @@
+<div class="h-full bg-teal-900 flex flex-grow items-center justify-center px-5 py-5">
+  <div class="w-full mx-auto rounded-xl shadow-xl text-gray-800 relative overflow-hidden" style="max-width: 350px;">
+    <!-- calculator screen -->
+    <div class="w-full h-40 bg-gradient-to-b from-gray-800 to-gray-700 text-right">
+      <!-- Showing the full problem screen -->
+      <div class="w-full py-5 px-6 text-2xl text-white font-thin">
+        {{ problemTitle }}
+      </div>
+      <!-- number screen -->
+      <div class="w-full py-5 px-6 text-6xl text-white font-thin">
+        {{ totalValue | number }}
+      </div>
+    </div>
+    <!-- end calculator screen -->
+    <!-- calculator button area -->
+    <div class="w-full bg-gradient-to-b from-red-500 to-red-800">
+      <ng-container *ngFor="let keyInfos of keyButtons">
+        <div class="flex w-full">
+          <ng-container *ngFor="let keyInfo of keyInfos">
+            <div [ngClass]="getButtonStyle(keyInfo.length)">
+              <app-button [letterDisplay]=keyInfo.name [type]=keyInfo.type (keyPress)="keyPress($event)"></app-button>
+            </div>
+          </ng-container>
+        </div>
+      </ng-container>
+     <!-- end calculator button area -->
+  </div>
+</div>

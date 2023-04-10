@@ -1,0 +1,15 @@
+.btn-quarter {
+    @apply border-r border-b border-red-400 w-1/4;
+}
+
+.btn-half {
+    @apply border-r border-b border-red-400 w-2/4;
+}
+
+.btn-third-quarter {
+    @apply border-r border-b border-red-400 w-3/4;
+}
+
+.btn-full {
+    @apply border-r border-b border-red-400 w-full;
+}

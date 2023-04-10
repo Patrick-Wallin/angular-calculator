@@ -1,0 +1,5 @@
+<ng-container *ngTemplateOutlet="buttonTemplate; context: { value: letterDisplay }"></ng-container>
+
+<ng-template #buttonTemplate let-value="value">
+    <button class="w-full h-16 outline-none hover:bg-red-700 hover: bg-opacity-50 text-white text-xl font-light" (click)="performKey()"> {{ value }} </button>
+</ng-template>
